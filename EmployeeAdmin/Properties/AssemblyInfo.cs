@@ -7,13 +7,13 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EmployeeAdmin")]
+[assembly: AssemblyTitle("Employee Admin")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EmployeeAdmin")]
-[assembly: AssemblyCopyright("Copyright ©  2009")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Futurescale Inc")]
+[assembly: AssemblyProduct("PureMVC.DotNET Employee Admin")]
+[assembly: AssemblyCopyright("Copyright © 2009, Futurescale Inc")]
+[assembly: AssemblyTrademark("PureMVC")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

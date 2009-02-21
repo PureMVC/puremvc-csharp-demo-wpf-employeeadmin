@@ -1,5 +1,5 @@
 PureMVC CSharp / WPF / EmployeeAdmin Demo - Login
-By Matt Brailsford <andy.adamczak@puremvc.org>
+By Andy Adamczak <andy.adamczak@puremvc.org>
 Copyright(c) 2009 Andy Adamczak, Some rights reserved.
 --------------------------------------------------------------------------
 Release Date: 2/21/09

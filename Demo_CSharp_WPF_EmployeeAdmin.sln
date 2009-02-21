@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeAdmin", "EmployeeAdmin\EmployeeAdmin.csproj", "{E59C3E1F-8A73-434C-8252-842B5E58FB80}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B25D09F0-955A-45BF-A64A-7BE2561086BD}"
+	ProjectSection(SolutionItems) = preProject
+		license.txt = license.txt
+		version.txt = version.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

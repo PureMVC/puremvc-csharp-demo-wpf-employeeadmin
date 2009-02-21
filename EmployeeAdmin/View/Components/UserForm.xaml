@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="Demo.PureMVC.EmployeeAdmin.View.Components.UserForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:enums="clr-namespace:Demo.PureMVC.EmployeeAdmin.Model.Enum"
+    Height="300" Width="300" Loaded="UserControl_Loaded">
+    <Grid Name="formGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="Auto" Name="title" VerticalAlignment="Top" FontWeight="Bold">User Profile</Label>
+        <TextBlock Grid.Column="1" Name="userNameDisplay" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="5" Text="{Binding Path=UserName, Mode=OneWay}"></TextBlock>
+        <Label Grid.Column="0" Grid.Row="1" Name="sFirstName" VerticalAlignment="Bottom" Margin="1">First name:</Label>
+        <TextBox Grid.Column="1" Grid.Row="1" Name="firstName" Margin="1" />
+        <Label Grid.Column="0" Grid.Row="2" Name="sLastName" VerticalAlignment="Bottom" Margin="1">Last name:</Label>
+        <TextBox Grid.Column="1" Grid.Row="2" Name="lastName" Margin="1" />
+        <Label Grid.Column="0" Grid.Row="3" Name="sEmail" VerticalAlignment="Bottom" Margin="1">Email:</Label>
+        <TextBox Grid.Column="1" Grid.Row="3" Name="email" Margin="1" />
+        <Label Grid.Column="0" Grid.Row="4" Name="sUserName" VerticalAlignment="Bottom" Margin="1">User name:</Label>
+        <TextBox Grid.Column="1" Grid.Row="4" Name="userName" Margin="1" TextChanged="userName_TextChanged" />
+        <Label Grid.Column="0" Grid.Row="5" Name="sPassword" VerticalAlignment="Bottom" Margin="1">Password:</Label>
+        <PasswordBox Grid.Column="1" Grid.Row="5" Name="password" Margin="1" PasswordChanged="password_PasswordChanged" />
+        <Label Grid.Column="0" Grid.Row="6" Name="sConfirmPassword" VerticalAlignment="Bottom" Margin="1">Confirm password:</Label>
+        <PasswordBox Grid.Column="1" Grid.Row="6" Name="confirmPassword" Margin="1" PasswordChanged="confirmPassword_PasswordChanged" />
+        <Label Grid.Column="0" Grid.Row="7" Name="sDepartment" VerticalAlignment="Bottom" Margin="1">Department:</Label>
+        <ComboBox Grid.Column="1" Grid.Row="7" Name="department" Margin="1" ItemsSource="{Binding Source={x:Static enums:DeptEnum.ComboList}}" SelectedIndex="0" SelectionChanged="department_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=Value}"></TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <StackPanel Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" Name="buttonPanel" VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="1,5">
+            <Button Height="23" Name="bUpdate" Width="75" Margin="5,0" Click="bUpdate_Click">Update User</Button>
+            <Button Height="23" Name="bCancel" Width="75" Click="bCancel_Click">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
